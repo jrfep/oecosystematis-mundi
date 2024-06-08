@@ -167,7 +167,7 @@ git branch -M dont-panic
 git push -u origin dont-panic
 ```
 
-Now the source code and git history is available at: <https://github.com/jrfep/spatial-one>
+Now the source code and git history is available at: <https://github.com/jrfep/oecosystematis-mundi>
 
 ### Comments through Giscus
 
