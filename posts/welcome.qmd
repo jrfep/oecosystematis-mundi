@@ -169,23 +169,6 @@ git push -u origin dont-panic
 
 Now the source code and git history is available at: <https://github.com/jrfep/oecosystematis-mundi>
 
-### Comments through Giscus
-
-How to get comments powered by GitHub Discussions and the giscus app?
-
-1. Enable the [Discussions feature](https://docs.github.com/en/discussions/quickstart) in the GitHub repo
-2. Install the [giscus app](https://github.com/apps/giscus) in the GitHub account
-3. [Enable comments](https://quarto.org/docs/output-formats/html-basics.html#commenting) in the _quarto.yml file:
-
-``` yaml
----
-website:
-  comments:
-    giscus: 
-      repo: jrfep/spatial-one
----
-```
-
 ### Quarto Pub
 
 I am preparing this site for my quarto.pub profile. From the directory where this project is located, I executed the quarto publish command for Quarto Pub:
