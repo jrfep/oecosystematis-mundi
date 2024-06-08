@@ -1,0 +1,27 @@
+---
+title: "This is me"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: droplet
+      text: ORCiD
+      href: https://orcid.org/0000-0002-9554-3395
+    - icon: wind
+      text: Google Scholar
+      href: https://scholar.google.es/citations?user=A2Thq5UAAAAJ&hl=en
+    - icon: fire
+      text: Github
+      href: https://github.com/jrfep
+    - icon: globe-americas
+      text: Página personal
+      href: https://jrfep.github.io
+comments: false
+---
+
+My name is José Rafael Ferrer Paris, or JR for short. 
+
+I am an ecologists with I have been working with the IUCN Red List of Ecosystems thematic group in the development of the IUCN Global Ecosystem Typology.
+
+I started my journey in the tropical plains of the Maracaibo Lake in Venezuela, have been to the transformed landscapes of Germany, the Fynbos in South Africa and the Andean Cordillera of Colombia and I currently live and work in the Botany Bay in Australia. 
+

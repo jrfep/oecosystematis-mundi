@@ -1,0 +1,17 @@
+project:
+  type: website
+
+website:
+  title: "Ecosystems of the world"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/jrfep
+      - icon: globe-americas
+        href: https://jrfep.github.io
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    highlight-style: solarized
