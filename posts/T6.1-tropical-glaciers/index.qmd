@@ -19,6 +19,11 @@ Tropical glaciers belong to the Ecosystem Functional Group [T6.1 Ice sheets, gla
 Glaciers are poetic landmarks in the tropical landscapes of the Andes. They inspire tales of frozen mythical creatures and serve as origin stories for local legends. These icy giants captivate painters, explorers, poets and scientists alike. Glacial ice seems solid and permanent, but it is actually water flowing at an imperceptibly slow pace. A single drop of water freezing on the glacier’s surface will spend years, even decades moving downwards before eventually leaving the glacier. The ice seems inert and frigid, but is teeming with small organisms. A delicate balance of inputs and outputs, a connection between the clouds and earth. An almost impossible balance considering the tropical landscape that surrounds them.
 And most likely this balance is already broken. 
 
+:::{.aside}
+Check these blog entries about the eternal snows in the Cordillera de Merida: [Oryx journal blog](https://www.oryxthejournal.org/blog/vanishing-tropical-glaciers-in-venezuela-a-delicate-balance-has-been-lost/){target="otherblogs"} and the
+[glacier casualty list](https://glaciercasualtylist.rice.edu/?data_id=dataSource_1-18ec41ee5e2-layer-75%3A35&dlg=ARTICLE&page=Page){target="otherblogs"}
+:::
+
 The ice that accumulated over millennia and centuries is melting faster and the input from new snowfall falls short of compensating for the loss. For years now there has been multiple warnings about the imminent disappearance of tropical glaciers. In fact, some have already been loss leaving just a memory. In some regions the remnants are too small, the declining trends too swift, and the drivers too strong for any hope.
 Cycles of positive and negative ice mass balance are part of the history of tropical glaciers. Geological evidence over very large timescales show: wet and cold years are good for accumulation of ice; dry and hot years increase melting and the glacier shrink. The slow pace of these changes has left profound marks in our landscapes. But human induced climate change and air pollution are likely exacerbating melting processes and inhibiting accumulation processes in a completely different time scales. 
 
