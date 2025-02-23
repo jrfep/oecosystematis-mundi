@@ -10,6 +10,10 @@ categories:
   - "F1 Rivers"
   - "F2 Lakes"
   - "TF1 Wetlands"
+execute: 
+  echo: false
+  message: false
+  warning: false
 ---
 
 I am not the first to admire [James Joyce’s Paean to Water](https://medicine-opera.com/2010/01/james-joyces-pean-to-water/){target="ext"}. This ode to water is sublime as it is, but I could not resist the temptation to try to identify and link the text with the water-based ecosystems on the ecosphere. 
@@ -26,3 +30,23 @@ Here is my contribution and modest tribute to a great writer.
 
 James Joyce - Ulysses, 1922. [17th Chapter](https://www.gutenberg.org/files/4300/4300-h/4300-h.htm#chap17){target="ext"} [Ithaca](https://en.wikibooks.org/wiki/Annotations_to_James_Joyce%27s_Ulysses/Ithaca){target="ext"}, pages [624](https://en.wikibooks.org/wiki/Annotations_to_James_Joyce%27s_Ulysses/Ithaca/624){target="ext"}-[625](https://en.wikibooks.org/wiki/Annotations_to_James_Joyce%27s_Ulysses/Ithaca/625){target="ext"}
 
+
+```{r}
+#| output: asis
+
+here::i_am("posts/welcome.qmd")
+data_dir <- here::here("Rdata")
+file_name <- here::here(data_dir, "flickr-photos.rds")
+photos <- readRDS(file = file_name)
+
+selected_photo <- dplyr::slice(photos, grep("Sculture by the Sea", title))
+
+photo_md <- sprintf(
+  "![**%s** by %s@flickr](%s){.preview-image .lightbox}",
+  selected_photo$title,
+  selected_photo$ownername,
+  selected_photo$url_m
+)
+
+cat(photo_md)
+```

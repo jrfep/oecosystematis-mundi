@@ -26,6 +26,26 @@ Melville's book provides a brilliant narrative of how a curious and apparently h
 
 As I read through the book, I was impressed with the seamless synthesis of lyrical expression, phylosophical thoughs and the scientific exploration for knowledge. The book has 135 chapters in total, and 17 of those focus on whale anatomy or behaviour, and additional ones dedicated to other species, like the giant squid or  the zooplankton [@Hoare2013-xb].
 
+
+```{r}
+#| output: asis
+here::i_am("posts/welcome.qmd")
+data_dir <- here::here("Rdata")
+file_name <- here::here(data_dir, "flickr-photos.rds")
+photos <- readRDS(file = file_name)
+
+selected_photo <- dplyr::slice(photos, grep("Cachalote", title))
+
+photo_md <- sprintf(
+  "![**%s** by %s@flickr](%s){.preview-image .lightbox}",
+  selected_photo$title,
+  selected_photo$ownername,
+  selected_photo$url_m
+)
+
+cat(photo_md)
+```
+
 But what about the whale's ecology and its multiple relationships to the world ecosystems? As the whalers chase the sperm whale through the seas, they are only scratching the surface of the Whale's world.
 
 The sperm whale or cachalot (_Physeter macrocephalus_) is a pelagic mammal with a worldwide range, and will migrate seasonally for feeding and breeding. Sperm whales breath air on the sea surface^[Call me <a href='https://global-ecosystems.org/explore/groups/M2.1' target='typology'>M2.1 Epipelagic ocean waters</a>] and usually dive between 300 and 800 meters in search of food. Although they can occasionally prey between 1 and 2 km depth, and reach down to at least 2,250 meters.^[Thus, mostly in the <a href='https://global-ecosystems.org/explore/groups/M2.2' target='typology'>M2.2 Mesopelagic ocean waters</a> and sometimes down to <a href='https://global-ecosystems.org/explore/groups/M2.3' target='typology'>M2.3 Bathypelagic ocean waters</a>] Sperm whales most likely use a combination of echolocation and vision to find and chase their prey in these deep, cold and dark waters.
