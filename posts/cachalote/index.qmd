@@ -1,0 +1,90 @@
+---
+title: "It is a Whale's world"
+subtitle: "The Sperm whale or Cachalot"
+author: "JR Ferrer-Paris"
+date: "04 February 2025"
+bibliography: references.bib
+categories:
+  - "M2 Open waters"
+  - "M3 Deep sea floor"
+  - "M3.7 CBE"
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+I  have had Moby-Dick in my list of books to read for a long time. The main narrator of the novel, which I will call [Ishmael](https://en.wikipedia.org/wiki/Ishmael_(Moby-Dick)), is overly fascinated with whaling and whales, and according to his very peculiar _Weltanschauung_, the sperm whale is the most magnificent among all the whales.
+
+<a title="Currier &amp; Ives, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Whaling_of_sperm_whale.jpg"><img width="100%" alt="Whaling of sperm whale" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Whaling_of_sperm_whale.jpg?20070809103132"></a>
+
+:::{.aside}
+<caption>Currier &amp; Ives, Public domain, via Wikimedia Commons</caption>
+:::
+
+Melville's book provides a brilliant narrative of how a curious and apparently humble man like Ishmael approaches the mysteries of the natural world in the form of one of the most fascinating creatures: the sperm whale. Melville's Ishmael uses science, art, law and other disciplines to explore the world and history of the whale. 
+
+As I read through the book, I was impressed with the seamless synthesis of lyrical expression, phylosophical thoughs and the scientific exploration for knowledge. The book has 135 chapters in total, and 17 of those focus on whale anatomy or behaviour, and additional ones dedicated to other species, like the giant squid or  the zooplankton [@Hoare2013-xb].
+
+But what about the whale's ecology and its multiple relationships to the world ecosystems? As the whalers chase the sperm whale through the seas, they are only scratching the surface of the Whale's world.
+
+The sperm whale or cachalot (_Physeter macrocephalus_) is a pelagic mammal with a worldwide range, and will migrate seasonally for feeding and breeding. Sperm whales breath air on the sea surface^[Call me <a href='https://global-ecosystems.org/explore/groups/M2.1' target='typology'>M2.1 Epipelagic ocean waters</a>] and usually dive between 300 and 800 meters in search of food. Although they can occasionally prey between 1 and 2 km depth, and reach down to at least 2,250 meters.^[Thus, mostly in the <a href='https://global-ecosystems.org/explore/groups/M2.2' target='typology'>M2.2 Mesopelagic ocean waters</a> and sometimes down to <a href='https://global-ecosystems.org/explore/groups/M2.3' target='typology'>M2.3 Bathypelagic ocean waters</a>] Sperm whales most likely use a combination of echolocation and vision to find and chase their prey in these deep, cold and dark waters.
+
+```{r}
+#| fig-width: 800
+#| classes: map
+library(rgbif)
+spermwhale <- 8123917
+dist_map <- map_fetch(taxonKey=spermwhale,
+          hexPerTile=200, style = "iNaturalist.poly", base_style="gbif-geyser",bin="hex")
+print(dist_map, info=FALSE)
+```
+
+
+:::{.aside}
+Occurrences of _Physeter macrocephalus_ according to: <br/>
+<img src='gbif-full-green-logo.svg' width='200'/>
+
+@GBIFdata
+:::
+
+```{css, echo=FALSE}
+.map img {
+  width: 100%;
+}
+```
+
+Sperm whales can be found  in all the oceans, both sexes range through temperate and tropical oceans and seas, and adult males can get to higher latitudes, although they avoid areas with sea ice. They can be found in the Mediterranean Sea, but not the Black Sea or Red Sea.
+
+Their distribution might be influenced by the higher availability of food in regions with steeper depth gradients. Populations are denser close to continental shelves^[<a href='https://global-ecosystems.org/explore/groups/M3.1' target='typology'>M3.1 Continental and island slopes</a>] and canyons^[<a href='https://global-ecosystems.org/explore/groups/M3.2' target='typology'>M3.2 Submarine canyons</a>]. 
+
+During their dives sperm whales feed on several species of cephalopods, including the giant squid, colossal squid and octopuses, crustaceans and fishes. Many of their prey species are confined to the deep waters of the ocean and never or very seldom swim near the surface. 
+
+```{r}
+library(rglobi)
+library(dplyr)
+library(DT)
+qry <- get_interactions_by_taxa(sourcetaxon='Physeter macrocephalus', interactiontype='preysOn')
+tbl <- qry |>
+    mutate(`Groups` = case_when(
+        grepl("Cephalopoda", target_taxon_path) ~ "Cephalopods",
+        grepl("Actinopterygii", target_taxon_path) ~ "Actinopterygians",
+        grepl("Malacostraca", target_taxon_path) ~ "Malacostracans",
+        TRUE ~ "others")) |>
+    group_by(`Groups`) |> 
+    summarise(`Number of species`=n_distinct(target_taxon_name)) 
+  knitr::kable(tbl)
+```
+
+:::{.aside}
+Preys of _Physeter macrocephalus_ according to: <br/>
+<img src='https://raw.githubusercontent.com/globalbioticinteractions/logo/refs/heads/main/globi_long_font.svg' width='200'/>
+
+@Poelen2014
+:::
+
+Whales behaviour has a great impact in marine ecosystems. Sperm whales are massive in size, and they eat around 3% of their body weight per day. The vertical movement of the sperm whales means that they are able to capture huge amounts of nutrients from the deeper ocean waters where they feed, and release a great portion of them (in the form of faeces and urine) near the ocean surface. This vertical transport of nutrients benefits phytoplankton and other plants, contributes to ocean productivity and the capture of atmospheric carbon.
+
+Whales also leave a mark in the environment when they die. The large body of a dead whale can sink to the bottom of the ocean and become an important source of nutrients for the seafloor biota. These "whale falls" become islands teeming with life that contrast sharply with the depauperate conditions of abyssal plains. Decomposition in these extreme environments is low, but is the basis for a growing community that is driven by chemosynthesis and the symbiotic relationships between microorganisms and the sessile fauna.^[<a href='https://global-ecosystems.org/explore/groups/M3.7' target='typology'>M3.7 Chemosynthetic-based-ecosystems (CBE)</a>]
+
+I am often struck by the fact that many animal species are able to connect remote ecosystems through their feeding behaviours, and life cycles dependant on vertical and horizontal migrations. But no other species can do this in the same magnitude and scale as the magnificent sperm whale. 
